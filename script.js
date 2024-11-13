@@ -109,7 +109,7 @@ closeBtn.addEventListener('click', function()
 
 logoutBtn.addEventListener('click', function()
  {
-  window.location.href = 'Admin-login.html'; 
+  window.location.href = 'index.html'; 
 });
 
 //EDIT BUTTON IN THE USER POPUP ACCOUNT INFO
