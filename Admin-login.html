@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>LIBRARY MANAGEMENT SYSTEM-Login</title>
+    
+</head>
+<body>
+    <h1 style="position: fixed; top: 0; left: 0; width: 100%; color: whitesmoke; background: transparent; padding: 10px; text-align: center; font-size: 80px;">Library Management System</h1>
+<div class="container">
+    <div class="login-form" style="margin-bottom: 50px;">
+  <form action="">
+    <h1>Admin Login</h1>
+    <div class="input-box">
+      <input type="text" placeholder="ADMIN ID" id="AdId" required>
+      <i class='bx bxs-user-circle'></i>
+    </div>
+    <div class="input-box">
+      <input type="text" placeholder="PASSWORD" id="AdPass" required>
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <button type="submit" onclick="login(event)" class="sub-btn">Login</button>
+    <div class="admin">
+      <p>Are you a User? <a href="Login.html" target="_self">Click here to Login</a></p>
+</div>
+</form>
+</div>
+    <script>
+  function login(event) 
+  {
+  event.preventDefault(); //to prevent reload a page when user clcik on any button 
+  const ADMIN_ID = "EIMSOLUTIONS";
+  const ADMIN_PASSWORD = "bangalore";
+  var adminId = document.getElementById("AdId").value;
+  var inputPassword = document.getElementById("AdPass").value;
+  if (adminId === ADMIN_ID && inputPassword === ADMIN_PASSWORD) 
+  {
+      window.location.href = "admin-home.html"
+    } 
+    else if (adminId !== ADMIN_ID || inputPassword !== ADMIN_PASSWORD) 
+  {
+   window.alert("Invalid Admin Id and Password");
+  } 
+}
+</script>
+</body>
+</html>

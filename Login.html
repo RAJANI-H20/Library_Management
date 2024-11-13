@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>LIBRARY MANAGEMENT SYSTEM-Login</title>
+</head>
+<body>
+    <h1 style="position: fixed; top: 0; left: 0; width: 100%; color:whitesmoke; background:transparent; padding: 10px; text-align: center; font-size:80px;">Library Management System</h1>
+
+    <div class="login-form">
+        <form action="">
+            <h1 style="text-align: center;">User Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="userId" required>         
+                <i class='bx bxs-user-circle'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Password" id="UserPass" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="sub-btn" onclick="login(event)">Login</button>
+        </form>
+        <div class="admin">
+            <p>Are you a Admin? <a href="Admin-login.html" target="_self">Click here to Login</a></p>
+        </div>
+    </div>
+    <script>
+        function login(event) {
+            event.preventDefault();
+            const USER_ID = "john";
+            const USER_PASSWORD = "john1234";
+            var userId = document.getElementById("userId").value;
+            var inputPassword = document.getElementById("UserPass").value;
+            if (userId === USER_ID && inputPassword === USER_PASSWORD) {
+                window.location.href = "user-home.html";
+            } else {
+                window.alert("Invalid UserId and Password");
+            }
+        }
+    </script>
+</body>
+</html
+      
